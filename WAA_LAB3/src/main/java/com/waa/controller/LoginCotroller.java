@@ -23,7 +23,7 @@ public class LoginCotroller {
 	@Autowired
 	UserService userService;
 
-	@RequestMapping(value = { "/login" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
 	public String getLoginForm(Model model, HttpSession session, HttpServletRequest request) {
 		User newUser = checkCookie(request);
 		if (newUser != null) {
@@ -117,7 +117,7 @@ public class LoginCotroller {
 		status.setComplete();
 		//session.removeAttribute("userInfo");
 		session.invalidate();
-		return "redirect:/login";
+		return "redirect:/";
 	}
 
 }
