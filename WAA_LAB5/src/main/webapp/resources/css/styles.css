@@ -1,0 +1,33 @@
+body{
+	background-color: snow;
+	text-align: center;
+}
+.caption {
+    font-size: 0.95em;
+    font-style: italic;
+    width: 230px;
+}
+.nameTable {
+    border: thin solid blue; 
+    width: 300px;
+    margin: auto;
+}
+.header {
+    text-align: center;
+    font-style: italic;
+    color: snow;
+    background: teal;
+}
+.oddRow {
+    height: 25px;
+    text-align: center;
+    background: #6F8A5D;
+}
+.evenRow {
+    text-align: center;
+    background: #5D858A;
+}
+.addStudnet {
+    display: block; 
+    text-align: center;
+}
