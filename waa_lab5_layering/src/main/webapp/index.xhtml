@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+
+	<title>#{msgs.windowTitle}</title>
+	<h:outputStylesheet library="css" name="styles.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<h:form>
+
+		<h:dataTable value="#{tableData.names}" var="name"
+			captionClass="caption" styleClass="nameTable" headerClass="header"
+			rowClasses="oddRow, evenRow">
+			<f:facet name="caption">#{msgs.caption}</f:facet>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="#{msgs.firstnameColumn}"
+						style="font-weight: bold" />
+				</f:facet>
+
+				<h:outputText value="#{name.first}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="#{msgs.lastnameColumn}"
+						style="font-weight: bold" />
+				</f:facet>
+
+				<h:outputText value="#{name.last}" />
+			</h:column>
+
+		</h:dataTable>
+		<p>
+			<h:link value="#{msgs.labelAdd}" outcome="addName" />
+			|
+
+			<h:link value="#{msgs.labelEdit}" outcome="editName" />
+			|
+
+			<h:link value="#{msgs.labelDelete}" outcome="deleteName" />
+		</p>
+
+
+	</h:form>
+
+</h:body>
+</html>

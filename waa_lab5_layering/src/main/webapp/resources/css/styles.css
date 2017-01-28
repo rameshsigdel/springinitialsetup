@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+body{
+	background-color: snow;
+	margin-left:100px;
+}
+.caption {
+    font-size: 0.95em;
+    font-style: italic;
+    
+}
+.nameTable {
+    border: thin solid blue; 
+    
+}
+.header {
+    text-align: center;
+    font-style: italic;
+    color: snow;
+    background: teal;
+}
+.oddRow {
+    height: 25px;
+    text-align: center;
+    background: #6F8A5D;
+}
+.evenRow {
+    text-align: center;
+    background: #5D858A;
+}
+.addName {
+    display: block; 
+    text-align: center;
+}
